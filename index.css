@@ -120,7 +120,9 @@ nav {
         max-width: 80%;
         max-height: 80%;
     }
-    
+    h1 {
+        font-size: clamp(2rem, 6vw, 40px);
+    }
 }
 @media only screen and (max-width: 600px) {
     .nav_right_box ul {
@@ -210,23 +212,6 @@ nav {
 
 
 }
-    @media only screen and (max-width: 750px) {
-        .main_box {
-            flex-direction: column;
-
-        }
-        .main_left_box {
-            width: 100%;
-            text-align: center;
-        }
-        .main_right_box {
-            padding-top: 100px;
-            width: 100%;
-        }
-    
-    
-    
-    }
 .films_img_box {
     display: grid;
     width: clamp(300px, 80%, 1500px);
@@ -266,12 +251,13 @@ nav {
     
     
 }
-.section_box_links {
-    height: 100vh;
-    display: flex;
-}
 .box_questionaire_center {
     height: 100%;
+}
+.section_box_links {
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 .box_links {
     padding-top: 100px;
@@ -283,8 +269,9 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 30px;
     box-sizing: content-box;
+    font-size: clamp(15px, 4vw, 30px);
+    overflow: hidden;
 }
 a:link, a:visited, a:active {
     text-decoration: none;
@@ -343,3 +330,29 @@ a:link, a:visited, a:active {
     color: var(--main_light_color);
 
 }
+    @media only screen and (max-width: 750px) {
+        .main_box {
+            flex-direction: column;
+    
+        }
+        .main_left_box {
+            width: 100%;
+            text-align: center;
+        }
+        .main_right_box {
+            padding-top: 100px;
+            width: 100%;
+        }
+        .section_box_links {
+            height: 200vh;
+            flex-direction: column;
+        }
+        .box_links {
+            width: 100%;
+            height: 50%;
+            /* text-align: center; */
+        }
+    
+    
+    
+    }
